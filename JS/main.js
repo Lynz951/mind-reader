@@ -6,6 +6,7 @@ let views= [
       headerText: "I can read your mind",
       helperText: "null",
     },
+
     {
       headerText: "Pick a number from 01-99",
       helperText: "when you have your number click next",
@@ -66,7 +67,7 @@ nextButton.addEventListener("click", () => {
 
 // resetButton.addEventListener("click", () => {
 //   headerText.innerHTML = views[0].headerText;
-//   helperText.innerHTML = views[0].helperText;
+//   helperText.textContent = views[0].helperText;
 // });
 
 
