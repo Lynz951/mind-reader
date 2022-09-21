@@ -25,18 +25,22 @@ INIT: Create my variables
 
 7. Symbols
     properties: randomized, answer symbol
-
-
-   
+ 
 
 FUNCTIONALITY: 
 
 FUNCTION init:
     let viewNumber = 0;
+    create eventListeners
+    create originalState = view(0);
+    render FUNCTION
 
 FUNCTION updateView:
+    if nextButton clicked run nextView
+    if go
+    render (look in state and pick out what goes on page)
 
-FUNCTION randomizeSymbols:
+FUNCTION randomizeSymbols: (run in init)
     randomize list of 9
     new list
     loop from 0-100 to create an element in JS
@@ -46,8 +50,12 @@ FUNCTION randomizeSymbols:
 FUNCTION nextView:
     increment view number by 1
 
+
 FUNCTION reset:
     set viewNmber = 0
+
+FUNCTION showSymbols:
+
 
 let state = {
     views: [
@@ -59,9 +67,9 @@ let state = {
     }, 
 
     {headerText: "Pick a number from 01-99",
-    nextButton: buttonShowNext,
+    nextButtonVisibility: true,
     helperText: "when you have your number click next",
-    goButton: buttonShowReset
+    goButtonVisibility: 
     },
 
     {headerText: "Add both digits together to get a new number",
@@ -76,7 +84,8 @@ let state = {
     goButton: buttonShowReset
     },
 
-    {headerText: "numbers-symbols",
+    {headerText: null,
+    symbols: showSymbols,
     nextButton: buttonShowReveal,
     helperText: "Find your new number. <br> Note the symbol beside the number."
     goButton: buttonShowReset
@@ -95,3 +104,7 @@ let state = {
 }
 
 state.views[state.currentView]
+
+[
+
+]
