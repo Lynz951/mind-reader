@@ -49,15 +49,49 @@ FUNCTION nextView:
 FUNCTION reset:
     set viewNmber = 0
 
-
-Ideas:
-
 let state = {
-    views: [{text: key}, {text:key}, {text: key}]
+    views: [
+    
+    {headerText: "I can read your mind",
+    nextButton: null,
+    helperText: null,
+    goButton: buttonShowGo
+    }, 
+
+    {headerText: "Pick a number from 01-99",
+    nextButton: buttonShowNext,
+    helperText: "when you have your number click next",
+    goButton: buttonShowReset
+    },
+
+    {headerText: "Add both digits together to get a new number",
+    nextButton: buttonShowNext,
+    helperText: "Ex: 14 is 1 + 4 = 5 <br> click next to proceed",
+    goButton: buttonShowReset
+    },
+
+    {headerText: "Subtract you new number from the original number",
+    nextButton: buttonShowNext,
+    helperText: "Ex: 14 - 5 = 9 <br> click next to proceed",
+    goButton: buttonShowReset
+    },
+
+    {headerText: "numbers-symbols",
+    nextButton: buttonShowReveal,
+    helperText: "Find your new number. <br> Note the symbol beside the number."
+    goButton: buttonShowReset
+    }
+
+    {headerText: answerSymbol,
+    nextButton: null,
+    helperText: "Your symbol is: <br> answerSymbol,
+    goButton: buttonShowReset
+    }
+     ]
+
     currentView: 0
     symbols:
-    answer:
-    ]
+    answerSymbol:
 }
 
 state.views[state.currentView]
