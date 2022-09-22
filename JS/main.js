@@ -1,6 +1,14 @@
 const nextButton = document.getElementById("nextButton");
 const resetButton = document.getElementById("resetButton");
+// let insertx = ["&", "@", "$", "%", "#", "!", "?"];
+let inserty = [":)", "&", "@", "$", "%", "#", "!", "?"];
 
+const headerText = document.getElementById("headerText");
+const helperText = document.getElementById("helperText");
+const randomize = document.getElementById('randomize');
+
+var view = 0;
+let yItem = randomValueFromArray(inserty);
 
 let views= [
     {
@@ -43,11 +51,7 @@ let views= [
     },
     ]
 
-const headerText = document.getElementById("headerText");
-const helperText = document.getElementById("helperText");
-const randomize = document.getElementById('randomize');
 
-var view = 0;
 
 nextButton.addEventListener("click", () => {
 
@@ -82,6 +86,8 @@ nextButton.addEventListener("click", () => {
   }
    
   else if (view === 4) {
+    // headerText.innerHTML = newSymbols;
+    // helperText.innerHTML = views[5].helperText.replaceAll(':inserty:', yItem);
     headerText.innerHTML = views[5].headerText.replaceAll(':inserty:', yItem);
     helperText.innerHTML = views[5].helperText.replaceAll(':inserty:', yItem);
     randomize.classList.remove('d-none');
@@ -104,15 +110,14 @@ function randomValueFromArray(array){
   return array[random];
 }
 
-let insertx = ["&", "@", "$", "%", "#", "!", "?"];
-let inserty = [":)", "&", "@", "$", "%", "#", "!", "?"];
+
 
 randomize.addEventListener('click', result);
 
 function result() {
  
   // let xItem = randomValueFromArray(insertx);
-  let yItem = randomValueFromArray(inserty);
+  
 
   let newSymbols = views[4].headerText;
   newSymbols = newSymbols.replaceAll(':inserty:', yItem);
