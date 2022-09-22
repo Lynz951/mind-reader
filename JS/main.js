@@ -15,17 +15,17 @@ let views= [
 
     {
       headerText: "Add both didgits together to get a new number",
-      helperText: "Ex: 14 is 1 + 4 = 5, click next to proceed",
+      helperText: "Ex: 14 is 1 + 4 = 5 <br> click next to proceed",
     },
 
     {
       headerText: "Subtract your new number from the original number",
-      helperText: "Ex: 14 - 5 = 9, click next to proceed",
+      helperText: "Ex: 14 - 5 = 9 <br> click next to proceed",
     },
 
     {
-      headerText: "0 - & <br> 1 - @ <br> 2 - $ <br> 3 - B <br> ...",
-      helperText: "Find your new number. Note the symbol beside the number",
+      headerText: "0 - & <br> 1 - @ <br> 2 - $ <br> 3 - B <br> 4 - % <br> 5 - # <br> 6 - ! <br> 7 - M <br> 8 - ? <br> 9 - * <br> 10 - & <br> 11 - @ <br> 12 - $ <br> 13 - B <br> 14 - % <br> 15 - # <br> 16 - ! <br> 17 - M <br> 18 - * <br> 19 - ? <br>",
+      helperText: "Find your new number. <br> Note the symbol beside the number",
     },
 
     {
@@ -68,33 +68,11 @@ nextButton.addEventListener("click", () => {
   view += 1;
 });
 
-
-// resetButton.addEventListener("click", () => {
-//   headerText.innerHTML = views[0].headerText;
-//   helperText.textContent = views[0].helperText;
-// });
-
-
-// Other way
-
-// var view = 0;
-// const headerText = document.getElementById("headerText");
-// const helperText = document.getElementById("helperText");
-
-// function whatView () {
-//   console.log(views[view]);
-// }
-
-// function nextView (e){
-// nextButton.addEventListener("click", () => {
-//   view++;
-// }).
-// whatView();
-// }
-
-// function reset (e){
-//   resetButton.addEventListener("click", () => {
-//   view = 0;
-// }).
-//   whatView();
-// }
+resetButton.addEventListener("click", () => {
+  if (view > 0) {
+    view = 0;
+      headerText.innerHTML = views[0].headerText;
+      helperText.innerHTML = views[0].helperText;
+    } 
+  return view;
+});
