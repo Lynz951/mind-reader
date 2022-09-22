@@ -1,4 +1,4 @@
-.btn-circle.btn-xl {
+#resetButton {
     width: 100px;
     height: 100px;
     padding: 13px 18px;
@@ -8,6 +8,17 @@
 }
 
 #headerText {
-    height: 200px;
+    height: 150px;
     overflow: scroll;
+    color: gray;
+}
+
+#helperText {
+    color:#7ADCFA;
+}
+
+#nextButton {
+    background-color: #7ADCFA;
+    border: .5px solid black;
+    color: white;
 }
