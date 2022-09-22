@@ -36,35 +36,36 @@ let views= [
 
 const headerText = document.getElementById("headerText");
 const helperText = document.getElementById("helperText");
-var views = 0;
+
+var view = 0;
 
 nextButton.addEventListener("click", () => {
 
-  if (views === 0) {
+  if (view === 0) {
     headerText.innerHTML = views[1].headerText;
     helperText.innerHTML = views[1].helperText;
   } 
     
-  else if (views === 1) {
+  else if (view === 1) {
     headerText.innerHTML = views[2].headerText;
     helperText.innerHTML = views[2].helperText;
   }
 
-  else if (views === 2) {
+  else if (view === 2) {
     headerText.innerHTML = views[3].headerText;
     helperText.innerHTML = views[3].helperText;
   }
     
-  else if (views === 3) {
+  else if (view === 3) {
     headerText.innerHTML = views[4].headerText;
     helperText.innerHTML = views[4].helperText;
   }
    
-  else if (views === 4) {
+  else if (view === 4) {
     headerText.innerHTML = views[5].headerText;
     helperText.innerHTML = views[5].helperText;
   }
-  views +=;
+  view += 1;
 });
 
 
