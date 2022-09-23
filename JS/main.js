@@ -60,38 +60,29 @@ nextButton.addEventListener("click", () => {
     helperText.innerHTML = views[1].helperText;
     resetButton.classList.remove('d-none');
     resetButton.classList.add('d-block');
-    randomize.classList.remove('d-none');
-    randomize.classList.add('d-block');
-    
   } 
     
   else if (view === 1) {
     headerText.innerHTML = views[2].headerText;
     helperText.innerHTML = views[2].helperText;
-    randomize.classList.remove('d-none');
-    randomize.classList.add('d-block');
   }
 
   else if (view === 2) {
     headerText.innerHTML = views[3].headerText;
     helperText.innerHTML = views[3].helperText;
-    randomize.classList.remove('d-none');
-    randomize.classList.add('d-block');
   }
     
   else if (view === 3) {
     headerText.innerHTML = views[4].headerText;
     helperText.innerHTML = views[4].helperText;
+    randomize.classList.remove('d-none');
+    randomize.classList.add('d-block');
     result();
   }
    
   else if (view === 4) {
-    // headerText.innerHTML = newSymbols;
-    // helperText.innerHTML = views[5].helperText.replaceAll(':inserty:', yItem);
     headerText.innerHTML = views[5].headerText.replaceAll(':inserty:', yItem);
     helperText.innerHTML = views[5].helperText.replaceAll(':inserty:', yItem);
-    randomize.classList.remove('d-none');
-    randomize.classList.add('d-block');
   }
   view += 1;
 });
@@ -110,17 +101,10 @@ function randomValueFromArray(array){
   return array[random];
 }
 
-
-
 randomize.addEventListener('click', result);
 
 function result() {
- 
-  // let xItem = randomValueFromArray(insertx);
-  
-
   let newSymbols = views[4].headerText;
   newSymbols = newSymbols.replaceAll(':inserty:', yItem);
-
   headerText.innerHTML = newSymbols;
 }
